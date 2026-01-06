@@ -259,7 +259,7 @@ const EmployeeManagement: React.FC = () => {
       key: "profileImage",
       width: 100,
       align: "center",
-      render: (image: string, record: Employee) => (
+      render: (image: string, ) => (
         <Avatar
           src={image || undefined}
           size={50}

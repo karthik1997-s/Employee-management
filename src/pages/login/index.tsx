@@ -7,7 +7,7 @@ import { useMutation } from "@tanstack/react-query";
 import { login } from "../../services/authService";
 
 type FieldType = {
-  email?: string;
+  email?: any;
   password?: string;
   remember?: boolean;
 };
@@ -20,7 +20,7 @@ const LoginPage = () => {
     mutationFn: login,
   });
   // Logout Function
-  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+  const onFinish: FormProps<FieldType>["onFinish"] = (values:any) => {
     if (values?.email && values?.password) {
       mutate(values, {
         onSuccess: (res: any) => {
